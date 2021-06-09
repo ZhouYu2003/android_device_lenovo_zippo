@@ -7,17 +7,17 @@
 
 BOARD_VENDOR := lenovo
 
-DEVICE_PATH := device/lenovo/zippo
+DEVICE_PATH := device/lenovo/heart
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := zippo
+TARGET_OTA_ASSERT_DEVICE := heart
 
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
 # Kernel
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-  TARGET_KERNEL_CONFIG := lineage_zippo_defconfig
+  TARGET_KERNEL_CONFIG := lineage_heart_defconfig
   TARGET_KERNEL_CLANG_COMPILE := true
   TARGET_KERNEL_SOURCE := kernel/lenovo/sm8150
 endif
@@ -26,4 +26,4 @@ endif
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # Inherit from the proprietary version
--include vendor/lenovo/zippo/BoardConfigVendor.mk
+-include vendor/lenovo/heart/BoardConfigVendor.mk
